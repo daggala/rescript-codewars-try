@@ -19,3 +19,7 @@ npm install
 ```sh
 node src/Demo.bs.js
 ```
+
+```sh
+node output.js
+```

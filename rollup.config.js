@@ -1,13 +1,13 @@
 /* global __dirname, process */
 
-import path from 'path';
-import nodeResolve from '@rollup/plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import { uglify } from 'rollup-plugin-uglify';
-import inlineSvg from 'rollup-plugin-inline-svg';
-import replace from '@rollup/plugin-replace';
-import json from '@rollup/plugin-json';
-import alias from '@rollup/plugin-alias';
+import path from "path";
+import nodeResolve from "@rollup/plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
+import { uglify } from "rollup-plugin-uglify";
+import inlineSvg from "rollup-plugin-inline-svg";
+import replace from "@rollup/plugin-replace";
+import json from "@rollup/plugin-json";
+import alias from "@rollup/plugin-alias";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -22,26 +22,26 @@ const projectRootDir = path.resolve(__dirname);
 
 export default [
   {
-    input: 'src/kata3/index.js',
+    input: "src/kata4/index.js",
     output: {
-      file: './output.js',
-      name: 'output',
-      format: 'es',
+      file: "./output.js",
+      name: "output",
+      format: "es",
     },
     plugins: [
       alias({
         entries: [
           {
-            find: 'src',
-            replacement: path.resolve(projectRootDir, 'src'),
+            find: "src",
+            replacement: path.resolve(projectRootDir, "src"),
           },
         ],
       }),
       replace({
-        'process.env.NODE_ENV': JSON.stringify('production'),
+        "process.env.NODE_ENV": JSON.stringify("production"),
       }),
       json({
-        exclude: 'node_modules/**',
+        exclude: "node_modules/**",
       }),
       inlineSvg({
         removeSVGTagAttrs: false,
