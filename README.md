@@ -3,7 +3,7 @@
 
 Additional nodes after I forked DZakh's repo:
  - I added chai tests so you can run pnpm test
- - When you start a new codewars challenge you create a res folder where you build your solution. Then you can also add a new test file inside the test folder, you can copy paste the code from codewars into the file. The only thing you have to do as well is to import the function from the mjs file generated from the res file 
+ - When you start a new codewars challenge you create a res folder where you build your solution. Then you can also add a new test file inside the test folder, you can copy paste the test code from codewars into the file. The only thing you have to do as well is to import the function from the bs file generated from the res file 
 
 -------
 
